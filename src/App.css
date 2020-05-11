@@ -54,6 +54,7 @@
 .list-head {
   text-align: center;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .footer {
