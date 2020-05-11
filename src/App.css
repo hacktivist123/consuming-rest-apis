@@ -36,6 +36,8 @@
 @media screen and (max-width: 600px) {
   .repo-container {
     width: 100%;
+    margin: 0;
+    box-shadow: none;
   }
 }
 
