@@ -13,7 +13,6 @@ function App() {
   useEffect(() => {
     SetAppState({ loading: true });
     const user = `https://api.github.com/users/hacktivist123/repos`;
-
     fetch(user)
       .then((res) => res.json())
       .then((repos) => {
