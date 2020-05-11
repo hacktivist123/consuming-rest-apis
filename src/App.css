@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Amiri', serif;
 }
 
 .container {
@@ -27,6 +28,30 @@
   width: 700px;
   height: 500px;
   margin: 50px;
-  padding: 30px 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  overflow: scroll;
+}
+
+.repo-text {
+  font-weight: 600;
+}
+
+.repo-description {
+  font-weight: 600;
+  font-style: bold;
+  color: var(--basic-color);
+}
+
+.list-head {
+  text-align: center;
+  font-weight: 800;
+}
+
+.footer {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.list {
+  list-style: circle;
 }
