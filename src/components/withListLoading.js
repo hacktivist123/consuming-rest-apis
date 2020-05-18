@@ -1,5 +1,5 @@
 import React from 'react';
-function WithLoading(Component) {
+function WithListLoading(Component) {
   return function WihLoadingComponent({ isLoading, ...props }) {
     if (!isLoading) return <Component {...props} />;
     return (
@@ -9,4 +9,4 @@ function WithLoading(Component) {
     );
   };
 }
-export default WithLoading;
+export default WithListLoading;
