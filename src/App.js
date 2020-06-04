@@ -30,7 +30,7 @@ function App() {
       <footer>
         <div className='footer'>
           Built{' '}
-          <span role='img' aria-label='emoji'>
+          <span role='img' aria-label='love'>
             💚
           </span>{' '}
           with by Shedrack Akintayo
