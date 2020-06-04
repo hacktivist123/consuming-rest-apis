@@ -6,26 +6,26 @@ import withListLoading from './components/withListLoading';
 
 function App() {
   const ListLoading = withListLoading(List);
-  const [AppState, SetAppState] = useState({
+  const [appState, setAppState] = useState({
     loading: false,
     repos: null,
   });
 
   useEffect(() => {
-    SetAppState({ loading: true });
-    const user = `https://api.github.com/users/hacktivist123/repos`;
-    axios.get(user).then((repos) => {
+    setAppState({ loading: true });
+    const apiUrl = `https://api.github.com/users/hacktivist123/repos`;
+    axios.get(apiUrl).then((repos) => {
       const allRepos = repos.data;
-      SetAppState({ loading: false, repos: allRepos });
+      setAppState({ loading: false, repos: allRepos });
     });
-  }, [SetAppState]);
+  }, [setAppState]);
   return (
     <div className='App'>
       <div className='container'>
         <h1>My Repositories</h1>
       </div>
       <div className='repo-container'>
-        <ListLoading isLoading={AppState.loading} repos={AppState.repos} />
+        <ListLoading isLoading={appState.loading} repos={appState.repos} />
       </div>
       <footer>
         <div className='footer'>
