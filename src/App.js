@@ -5,32 +5,32 @@ import withListLoading from './components/withListLoading';
 
 function App() {
   const ListLoading = withListLoading(List);
-  const [AppState, SetAppState] = useState({
+  const [appState, setAppState] = useState({
     loading: false,
     repos: null,
   });
 
   useEffect(() => {
-    SetAppState({ loading: true });
-    const user = `https://api.github.com/users/hacktivist123/repos`;
-    fetch(user)
+    setAppState({ loading: true });
+    const apiUrl = `https://api.github.com/users/hacktivist123/repos`;
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((repos) => {
-        SetAppState({ loading: false, repos: repos });
+        setAppState({ loading: false, repos: repos });
       });
-  }, [SetAppState]);
+  }, [setAppState]);
   return (
     <div className='App'>
       <div className='container'>
         <h1>My Repositories</h1>
       </div>
       <div className='repo-container'>
-        <ListLoading isLoading={AppState.loading} repos={AppState.repos} />
+        <ListLoading isLoading={appState.loading} repos={appState.repos} />
       </div>
       <footer>
         <div className='footer'>
           Built{' '}
-          <span role='img' aria-label='emoji'>
+          <span role='img' aria-label='love'>
             💚
           </span>{' '}
           with by Shedrack Akintayo
