@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --basic-color: #23cc71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EDEFDE;
 }
 
 .App {
@@ -10,59 +21,83 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Amiri', serif;
+  font-family: 'Montserrat', serif;
   overflow: hidden;
 }
 
-.container {
+.App {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.container h1 {
-  font-size: 60px;
-  text-align: center;
-  color: var(--basic-color);
+.App h2{
+  color: #4D4D3D;
+  margin-bottom: 10px;
 }
 
 .repo-container {
-  width: 50%;
-  height: 700px;
-  margin: 50px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  overflow: scroll;
-  line-height: 30px;
+  overflow-y: scroll;
 }
 
-@media screen and (max-width: 600px) {
-  .repo-container {
-    width: 100%;
-    margin: 0;
-    box-shadow: none;
-  }
-}
-
-.repo-text {
-  font-weight: 600;
-}
-
-.repo-description {
-  font-weight: 600;
-  font-style: bold;
-  color: var(--basic-color);
-}
-
-.list-head {
-  text-align: center;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.footer {
-  font-size: 15px;
-  font-weight: 600;
+.list-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .list {
-  list-style: circle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 210px;
+  height: 210px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: #4D4D3D;
+}
+
+.list img{
+  margin-top: 10px;
+}
+
+.list p{
+  margin: 10px 0px;
+}
+
+.container {
+  padding: 10px 0px;
+  margin: 0px 0px 10px 0px;
+  background-color: #4D4D3D;
+  color: #F0F0EB;
+  width: 100%;
+  text-align: center;
+}
+
+.container h1 {
+  font-weight: 900;
+}
+
+.input{
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #4D4D3D;
 }
